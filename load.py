@@ -1,3 +1,4 @@
+#该文件调用本地训练好的模型，生成model 以及 graph 方便app调用
 import numpy as np
 import keras.models
 from scipy.misc import imread, imresize,imshow
@@ -15,7 +16,7 @@ def init():
     loaded_model_json = json_file.read()
     json_file.close()
     model = model_from_json(loaded_model_json)
-    #load woeights into new model
+    #将 woeights 载入 model 中
     model.load_weights("model.h5")
     print("Loaded Model from disk")
     
