@@ -1,4 +1,5 @@
 ## MNIST Flask
+![image](https://github.com/johnli-zr/mnist-flask/blob/master/Screen%20Shot%202018-12-02%20at%2015.59.09.png)
 ### 运行方式：
  1.本地运行
  
