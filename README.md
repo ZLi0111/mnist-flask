@@ -32,4 +32,7 @@ docker run --name some-cassandra -p 9042:9042 -d cassandra:latest
 
 docker run -it --link some-cassandra:cassandra --rm cassandra cqlsh cassandra
 
+### 三、查看cassandra中存储的数据
+use mnist_database
 
+select * from mnist1
