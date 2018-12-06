@@ -28,7 +28,7 @@
 
 ### 二、连接cassandra
 
-docker run --name some-cassandra -p 127.0.0.1:9042:9042 -d cassandra:latest
+docker run --name some-cassandra -p 9042:9042 -d cassandra:latest
 
 docker run -it --link some-cassandra:cassandra --rm cassandra cqlsh cassandra
 
