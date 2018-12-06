@@ -1,6 +1,7 @@
 ## MNIST Flask
 ![image](https://github.com/johnli-zr/mnist-flask/blob/master/Screen%20Shot%202018-12-02%20at%2015.59.09.png)
 ### 运行方式：
+#### 一、
  1.本地运行
  
  1⃣️安装必要的环境：
@@ -21,8 +22,14 @@
 
 1⃣️安装docker，docker入门见：https://docs.docker.com/install/overview/
 
-2⃣️docker pull lizr0111/mnist:flask
+2⃣️docker build -t IMAGE_NAME .
 
-3⃣️docker run -p 4000:5000 lizr0111/mnist:falsk
+3⃣️docker run -d -p 4000:5000 IMAGE_NAME
+
+### 二、连接cassandra
+
+docker run --name some-cassandra -p 127.0.0.1:9042:9042 -d cassandra:latest
+
+docker run -it --link some-cassandra:cassandra --rm cassandra cqlsh cassandra
 
 
