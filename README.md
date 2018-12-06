@@ -23,9 +23,11 @@
 1⃣️安装docker，docker入门见：https://docs.docker.com/install/overview/
 
 2⃣️使用docker创建一个image
+
 docker build -t IMAGE_NAME .
 
 3⃣️运行该image
+
 docker run -d -p 4000:5000 IMAGE_NAME
 
 
@@ -38,6 +40,7 @@ docker run -d -p 4000:5000 IMAGE_NAME
 docker run --name some-cassandra -p 9042:9042 -d cassandra:latest
 
 2⃣️将你创建的cassandra容器与程序中创建的容器进行连接并删除（）
+
 docker run -it --link some-cassandra:cassandra --rm cassandra cqlsh cassandra
 
 
